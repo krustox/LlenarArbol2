@@ -17,7 +17,7 @@ class HoldingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create holding" do
     assert_difference('Holding.count') do
-      post holdings_url, params: { holding: { display_holding: @holding.display_holding, holding_id: @holding.holding_id, nombre_holding: @holding.nombre_holding } }
+      post holdings_url, params: { holding: {  } }
     end
 
     assert_redirected_to holding_url(Holding.last)
@@ -34,7 +34,7 @@ class HoldingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update holding" do
-    patch holding_url(@holding), params: { holding: { display_holding: @holding.display_holding, holding_id: @holding.holding_id, nombre_holding: @holding.nombre_holding } }
+    patch holding_url(@holding), params: { holding: {  } }
     assert_redirected_to holding_url(@holding)
   end
 

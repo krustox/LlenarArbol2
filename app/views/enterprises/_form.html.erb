@@ -12,20 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :empresa_id %>
-    <%= f.number_field :empresa_id %>
+    <%= f.label :holding_id %>
+    <%= f.collection_select :holding_id, @holding ,:id, :display_holding, include_blank: true  %>
   </div>
 
-  <div class="field">
+<!--  <div class="field">
     <%= f.label :holding_id %>
     <%= f.number_field :holding_id %>
   </div>
-
-  <div class="field">
-    <%= f.label :nombre_empresa %>
-    <%= f.text_field :nombre_empresa %>
-  </div>
-
+-->
   <div class="field">
     <%= f.label :display_empresa %>
     <%= f.text_field :display_empresa %>

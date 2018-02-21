@@ -5,27 +5,30 @@ class EnterprisesController < ApplicationController
   # GET /enterprises.json
   def index
     @enterprises = Enterprise.all
+    @holding = Holding.all
   end
 
   # GET /enterprises/1
   # GET /enterprises/1.json
   def show
+    @holding=Holding.find(params[:id])
   end
 
   # GET /enterprises/new
   def new
+    @holding = Holding.all
     @enterprise = Enterprise.new
   end
 
   # GET /enterprises/1/edit
   def edit
+    @holding = Holding.all
   end
 
   # POST /enterprises
   # POST /enterprises.json
   def create
     @enterprise = Enterprise.new(enterprise_params)
-
     respond_to do |format|
       if @enterprise.save
         format.html { redirect_to @enterprise, notice: 'Enterprise was successfully created.' }
@@ -69,6 +72,7 @@ class EnterprisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def enterprise_params
-      params.require(:enterprise).permit(:empresa_id, :holding_id, :nombre_empresa, :display_empresa)
+      params.require(:enterprise).permit( :holding_id, :display_empresa)
     end
+
 end

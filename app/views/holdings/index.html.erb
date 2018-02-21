@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Holdings</h1>
+<h1>Holding</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Holding</th>
-      <th>Nombre holding</th>
-      <th>Display holding</th>
-      <th colspan="3"></th>
+      <th>Id</th>
+      <th >Nombre</th>
+      <th >Display</th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
   <tbody>
     <% @holdings.each do |holding| %>
       <tr>
-        <td><%= holding.holding_id %></td>
+        <td><%= holding.id %></td>
         <td><%= holding.nombre_holding %></td>
         <td><%= holding.display_holding %></td>
         <td><%= link_to 'Show', holding %></td>
