@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aggrupations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agrupacion</th>
+      <th>Tipo</th>
+      <th>Nombre agrupacion</th>
+      <th>Display agrupacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aggrupations.each do |aggrupation| %>
+      <tr>
+        <td><%= aggrupation.agrupacion_id %></td>
+        <td><%= aggrupation.tipo_id %></td>
+        <td><%= aggrupation.nombre_agrupacion %></td>
+        <td><%= aggrupation.display_agrupacion %></td>
+        <td><%= link_to 'Show', aggrupation %></td>
+        <td><%= link_to 'Edit', edit_aggrupation_path(aggrupation) %></td>
+        <td><%= link_to 'Destroy', aggrupation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aggrupation', new_aggrupation_path %>

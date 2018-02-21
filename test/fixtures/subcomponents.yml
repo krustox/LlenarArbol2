@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subcomponente_id: 1
+  componente_id: 1
+  nombre_subcomponente: MyString
+  display_subcomponente: MyString
+
+two:
+  subcomponente_id: 1
+  componente_id: 1
+  nombre_subcomponente: MyString
+  display_subcomponente: MyString

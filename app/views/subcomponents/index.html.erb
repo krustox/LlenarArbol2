@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Subcomponents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subcomponente</th>
+      <th>Componente</th>
+      <th>Nombre subcomponente</th>
+      <th>Display subcomponente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subcomponents.each do |subcomponent| %>
+      <tr>
+        <td><%= subcomponent.subcomponente_id %></td>
+        <td><%= subcomponent.componente_id %></td>
+        <td><%= subcomponent.nombre_subcomponente %></td>
+        <td><%= subcomponent.display_subcomponente %></td>
+        <td><%= link_to 'Show', subcomponent %></td>
+        <td><%= link_to 'Edit', edit_subcomponent_path(subcomponent) %></td>
+        <td><%= link_to 'Destroy', subcomponent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subcomponent', new_subcomponent_path %>

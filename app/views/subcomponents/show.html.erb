@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subcomponente:</strong>
+  <%= @subcomponent.subcomponente_id %>
+</p>
+
+<p>
+  <strong>Componente:</strong>
+  <%= @subcomponent.componente_id %>
+</p>
+
+<p>
+  <strong>Nombre subcomponente:</strong>
+  <%= @subcomponent.nombre_subcomponente %>
+</p>
+
+<p>
+  <strong>Display subcomponente:</strong>
+  <%= @subcomponent.display_subcomponente %>
+</p>
+
+<%= link_to 'Edit', edit_subcomponent_path(@subcomponent) %> |
+<%= link_to 'Back', subcomponents_path %>

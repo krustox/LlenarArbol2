@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Segmento:</strong>
+  <%= @segment.segmento_id %>
+</p>
+
+<p>
+  <strong>Agrupacion:</strong>
+  <%= @segment.agrupacion_id %>
+</p>
+
+<p>
+  <strong>Nombre segmento:</strong>
+  <%= @segment.nombre_segmento %>
+</p>
+
+<p>
+  <strong>Display segmento:</strong>
+  <%= @segment.display_segmento %>
+</p>
+
+<%= link_to 'Edit', edit_segment_path(@segment) %> |
+<%= link_to 'Back', segments_path %>

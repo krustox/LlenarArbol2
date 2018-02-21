@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_id: 1
+  servicio_id: 1
+  nombre_tipo: MyString
+  display_tipo: MyString
+
+two:
+  tipo_id: 1
+  servicio_id: 1
+  nombre_tipo: MyString
+  display_tipo: MyString

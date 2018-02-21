@@ -1,0 +1,37 @@
+<%= form_for(aggrupation) do |f| %>
+  <% if aggrupation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aggrupation.errors.count, "error") %> prohibited this aggrupation from being saved:</h2>
+
+      <ul>
+      <% aggrupation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :agrupacion_id %>
+    <%= f.number_field :agrupacion_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipo_id %>
+    <%= f.number_field :tipo_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombre_agrupacion %>
+    <%= f.text_field :nombre_agrupacion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :display_agrupacion %>
+    <%= f.text_field :display_agrupacion %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

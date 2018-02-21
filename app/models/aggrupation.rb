@@ -1,0 +1,2 @@
+class Aggrupation < ApplicationRecord
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Elements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Subcomponente</th>
+      <th>Nombre elemento</th>
+      <th>Display elemento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @elements.each do |element| %>
+      <tr>
+        <td><%= element.elemento_id %></td>
+        <td><%= element.subcomponente_id %></td>
+        <td><%= element.nombre_elemento %></td>
+        <td><%= element.display_elemento %></td>
+        <td><%= link_to 'Show', element %></td>
+        <td><%= link_to 'Edit', edit_element_path(element) %></td>
+        <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Element', new_element_path %>

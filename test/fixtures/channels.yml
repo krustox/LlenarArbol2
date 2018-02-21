@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  canal_id: 1
+  empresa_id: 1
+  nombre_canal: MyString
+  display_canal: MyString
+
+two:
+  canal_id: 1
+  empresa_id: 1
+  nombre_canal: MyString
+  display_canal: MyString

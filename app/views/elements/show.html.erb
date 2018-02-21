@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Elemento:</strong>
+  <%= @element.elemento_id %>
+</p>
+
+<p>
+  <strong>Subcomponente:</strong>
+  <%= @element.subcomponente_id %>
+</p>
+
+<p>
+  <strong>Nombre elemento:</strong>
+  <%= @element.nombre_elemento %>
+</p>
+
+<p>
+  <strong>Display elemento:</strong>
+  <%= @element.display_elemento %>
+</p>
+
+<%= link_to 'Edit', edit_element_path(@element) %> |
+<%= link_to 'Back', elements_path %>

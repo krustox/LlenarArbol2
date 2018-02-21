@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subservicio:</strong>
+  <%= @subservice.subservicio_id %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @subservice.tipo_id %>
+</p>
+
+<p>
+  <strong>Nombre subservicio:</strong>
+  <%= @subservice.nombre_subservicio %>
+</p>
+
+<p>
+  <strong>Display subservicio:</strong>
+  <%= @subservice.display_subservicio %>
+</p>
+
+<%= link_to 'Edit', edit_subservice_path(@subservice) %> |
+<%= link_to 'Back', subservices_path %>

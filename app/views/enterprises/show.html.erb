@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @enterprise.empresa_id %>
+</p>
+
+<p>
+  <strong>Holding:</strong>
+  <%= @enterprise.holding_id %>
+</p>
+
+<p>
+  <strong>Nombre empresa:</strong>
+  <%= @enterprise.nombre_empresa %>
+</p>
+
+<p>
+  <strong>Display empresa:</strong>
+  <%= @enterprise.display_empresa %>
+</p>
+
+<%= link_to 'Edit', edit_enterprise_path(@enterprise) %> |
+<%= link_to 'Back', enterprises_path %>

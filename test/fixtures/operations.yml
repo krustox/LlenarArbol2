@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operacion_id: 1
+  transaccion_id: 1
+  nombre_operacion: MyString
+  display_operacion: MyString
+
+two:
+  operacion_id: 1
+  transaccion_id: 1
+  nombre_operacion: MyString
+  display_operacion: MyString

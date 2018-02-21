@@ -1,0 +1,37 @@
+<%= form_for(subcomponent) do |f| %>
+  <% if subcomponent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subcomponent.errors.count, "error") %> prohibited this subcomponent from being saved:</h2>
+
+      <ul>
+      <% subcomponent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subcomponente_id %>
+    <%= f.number_field :subcomponente_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :componente_id %>
+    <%= f.number_field :componente_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombre_subcomponente %>
+    <%= f.text_field :nombre_subcomponente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :display_subcomponente %>
+    <%= f.text_field :display_subcomponente %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

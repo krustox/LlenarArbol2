@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Subservices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subservicio</th>
+      <th>Tipo</th>
+      <th>Nombre subservicio</th>
+      <th>Display subservicio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subservices.each do |subservice| %>
+      <tr>
+        <td><%= subservice.subservicio_id %></td>
+        <td><%= subservice.tipo_id %></td>
+        <td><%= subservice.nombre_subservicio %></td>
+        <td><%= subservice.display_subservicio %></td>
+        <td><%= link_to 'Show', subservice %></td>
+        <td><%= link_to 'Edit', edit_subservice_path(subservice) %></td>
+        <td><%= link_to 'Destroy', subservice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subservice', new_subservice_path %>

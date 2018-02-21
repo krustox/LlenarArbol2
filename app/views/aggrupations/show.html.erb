@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agrupacion:</strong>
+  <%= @aggrupation.agrupacion_id %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @aggrupation.tipo_id %>
+</p>
+
+<p>
+  <strong>Nombre agrupacion:</strong>
+  <%= @aggrupation.nombre_agrupacion %>
+</p>
+
+<p>
+  <strong>Display agrupacion:</strong>
+  <%= @aggrupation.display_agrupacion %>
+</p>
+
+<%= link_to 'Edit', edit_aggrupation_path(@aggrupation) %> |
+<%= link_to 'Back', aggrupations_path %>

@@ -1,0 +1,2 @@
+class Subcomponent < ApplicationRecord
+end
