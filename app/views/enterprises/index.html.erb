@@ -14,15 +14,17 @@
   </thead>
 
   <tbody>
-    <% @enterprises.each do |enterprise| %>
+    <% @enterprises.each do |enterprise|
+        holding = @holding.find_by id: enterprise.holding_id
+    %>
       <tr>
         <td><%= enterprise.id %></td>
-        <td><%= enterprise.holding_id %></td>
+        <td><%= holding.display_holding %></td>
         <td><%= enterprise.nombre_empresa %></td>
         <td><%= enterprise.display_empresa %></td>
-        <td><%= link_to 'Show', enterprise %></td>
-        <td><%= link_to 'Edit', edit_enterprise_path(enterprise) %></td>
-        <td><%= link_to 'Destroy', enterprise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', enterprise %></td>
+        <td><%= link_to 'Editar', edit_enterprise_path(enterprise) %></td>
+        <td><%= link_to 'Eliminar', enterprise, method: :delete, data: { confirm: 'Desea eliminar este registro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Enterprise', new_enterprise_path %>
+<%= link_to 'Nueva Empresa', new_enterprise_path %>

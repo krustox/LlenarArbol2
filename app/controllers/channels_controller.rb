@@ -5,20 +5,25 @@ class ChannelsController < ApplicationController
   # GET /channels.json
   def index
     @channels = Channel.all
+    @enterprises = Enterprise.all
   end
 
   # GET /channels/1
   # GET /channels/1.json
   def show
+    @enterprises = Enterprise.find(params[:id])
   end
 
   # GET /channels/new
   def new
+    @holding = Holding.all
+    @enterprise = Enterprise.all
     @channel = Channel.new
   end
 
   # GET /channels/1/edit
   def edit
+    @holding = Holding.all
   end
 
   # POST /channels
@@ -28,7 +33,7 @@ class ChannelsController < ApplicationController
 
     respond_to do |format|
       if @channel.save
-        format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
+        format.html { redirect_to @channel, notice: 'Canal creado con exito.' }
         format.json { render :show, status: :created, location: @channel }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class ChannelsController < ApplicationController
   def update
     respond_to do |format|
       if @channel.update(channel_params)
-        format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
+        format.html { redirect_to @channel, notice: 'El canal fue actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @channel }
       else
         format.html { render :edit }
@@ -56,7 +61,7 @@ class ChannelsController < ApplicationController
   def destroy
     @channel.destroy
     respond_to do |format|
-      format.html { redirect_to channels_url, notice: 'Channel was successfully destroyed.' }
+      format.html { redirect_to channels_url, notice: 'El Canal fue eliminado de forma correcta.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +74,7 @@ class ChannelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
-      params.require(:channel).permit(:canal_id, :empresa_id, :nombre_canal, :display_canal)
+      params.require(:channel).permit( :empresa_id, :display_canal)
     end
+
 end

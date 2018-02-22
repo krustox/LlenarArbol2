@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Canal:</strong>
-  <%= @channel.canal_id %>
+  <strong>Id:</strong>
+  <%= @channel.id %>
 </p>
 
 <p>
   <strong>Empresa:</strong>
-  <%= @channel.empresa_id %>
+  <%= @enterpise.display_empresa %>
 </p>
 
 <p>
@@ -20,5 +20,5 @@
   <%= @channel.display_canal %>
 </p>
 
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+<%= link_to 'Editar', edit_channel_path(@channel) %> |
+<%= link_to 'Regresar', channels_path %>

@@ -12,18 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :canal_id %>
-    <%= f.number_field :canal_id %>
+    <%= f.label "Holding" %>
+    <% options = options_from_collection_for_select @holding ,:id, :display_holding %>
+    <%= select_tag "holding", options  %>
   </div>
 
   <div class="field">
     <%= f.label :empresa_id %>
-    <%= f.number_field :empresa_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :nombre_canal %>
-    <%= f.text_field :nombre_canal %>
+    <%= f.collection_select :enterprise_id,@enterprise,:id,:display_empresa, include_blank: true  %>
   </div>
 
   <div class="field">

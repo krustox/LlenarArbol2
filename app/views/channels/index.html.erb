@@ -1,28 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Channels</h1>
+<h1>Canales</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Canal</th>
+      <th>Id</th>
       <th>Empresa</th>
       <th>Nombre canal</th>
       <th>Display canal</th>
-      <th colspan="3"></th>
+      <th colspan="3">Acciones</th>
     </tr>
   </thead>
 
   <tbody>
     <% @channels.each do |channel| %>
       <tr>
-        <td><%= channel.canal_id %></td>
+        <td><%= channel.id %></td>
         <td><%= channel.empresa_id %></td>
         <td><%= channel.nombre_canal %></td>
         <td><%= channel.display_canal %></td>
-        <td><%= link_to 'Show', channel %></td>
-        <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
-        <td><%= link_to 'Destroy', channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', channel %></td>
+        <td><%= link_to 'Editar', edit_channel_path(channel) %></td>
+        <td><%= link_to 'Eliminar', channel, method: :delete, data: { confirm: 'Desea eliminar este registro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Channel', new_channel_path %>
+<%= link_to 'Nuevo Canal', new_channel_path %>

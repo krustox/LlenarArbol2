@@ -28,7 +28,7 @@ class HoldingsController < ApplicationController
 
     respond_to do |format|
       if @holding.save
-        format.html { redirect_to @holding, notice: 'Holding was successfully created.' }
+        format.html { redirect_to @holding, notice: 'Holding creado con exito.' }
         format.json { render :show, status: :created, location: @holding }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class HoldingsController < ApplicationController
   def update
     respond_to do |format|
       if @holding.update(holding_params)
-        format.html { redirect_to @holding, notice: 'Holding was successfully updated.' }
+        format.html { redirect_to @holding, notice: 'Holding actualizado exitosamente.' }
         format.json { render :show, status: :ok, location: @holding }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class HoldingsController < ApplicationController
   def destroy
     @holding.destroy
     respond_to do |format|
-      format.html { redirect_to holdings_url, notice: 'Holding was successfully destroyed.' }
+      format.html { redirect_to holdings_url, notice: 'Holding eliminado correctamente.' }
       format.json { head :no_content }
     end
   end
