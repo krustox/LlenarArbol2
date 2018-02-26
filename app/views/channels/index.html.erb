@@ -14,10 +14,12 @@
   </thead>
 
   <tbody>
-    <% @channels.each do |channel| %>
+    <% @channels.each do |channel|
+        empresa = Enterprise.find_by id: @channels.enterprise_id
+    %>
       <tr>
         <td><%= channel.id %></td>
-        <td><%= channel.empresa_id %></td>
+        <td><%= empresa.display_empresa %></td>
         <td><%= channel.nombre_canal %></td>
         <td><%= channel.display_canal %></td>
         <td><%= link_to 'Mostrar', channel %></td>

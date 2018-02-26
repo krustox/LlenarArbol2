@@ -11,7 +11,7 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
-    @enterprises = Enterprise.find(params[:id])
+    @enterprises = Enterprise.all
   end
 
   # GET /channels/new

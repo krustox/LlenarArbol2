@@ -11,7 +11,7 @@ class EnterprisesController < ApplicationController
   # GET /enterprises/1
   # GET /enterprises/1.json
   def show
-    @holding=Holding.find(params[:id])
+    @holding=Holding.all
   end
 
   # GET /enterprises/new

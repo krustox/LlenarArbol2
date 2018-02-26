@@ -7,7 +7,8 @@
 
 <p>
   <strong>Holding:</strong>
-  <%= @holding.display_holding %>
+  <% holding = @holding.find_by id: @enterprise.holding_id %>
+  <%= holding.display_holding %>
 </p>
 
 <p>
