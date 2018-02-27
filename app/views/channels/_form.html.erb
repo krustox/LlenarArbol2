@@ -14,12 +14,12 @@
   <div class="field">
     <%= f.label "Holding" %>
     <% options = options_from_collection_for_select @holding ,:id, :display_holding %>
-    <%= select_tag "holding", options, prompt: "Seleccionar Holding"  %>
+    <%= select_tag "holding", options, prompt: "Seleccionar Holding", class: "holding"  %>
   </div>
 
   <div class="field">
     <%= f.label :empresa_id %>
-    <%= f.collection_select :enterprise_id,{},:id,:display_empresa, prompt: "Seleccionar Empresa"  %>
+    <%= f.collection_select :enterprise_id,{},:id,:display_empresa,{ prompt: "Seleccionar Empresa"}, {class: "empresa"}  %>
   </div>
 
   <div class="field">

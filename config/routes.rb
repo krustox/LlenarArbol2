@@ -17,7 +17,11 @@ Rails.application.routes.draw do
   resources :subservices
   resources :types
   resources :services
-  resources :channels
+  resources :channels  do
+  collection do
+    get 'get_enterprises', to: "channels#get_enterprises"
+  end
+end
   resources :enterprises
   resources :holdings
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

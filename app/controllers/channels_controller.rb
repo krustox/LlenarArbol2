@@ -77,4 +77,7 @@ class ChannelsController < ApplicationController
       params.require(:channel).permit( :empresa_id, :display_canal)
     end
 
+    def get_enterprises
+       @enterprises = Enterprise.find_by id: holding_id
+    end
 end
