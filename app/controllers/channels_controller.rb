@@ -17,7 +17,6 @@ class ChannelsController < ApplicationController
   # GET /channels/new
   def new
     @holding = Holding.all
-    @enterprise = Enterprise.all
     @channel = Channel.new
   end
 
@@ -74,10 +73,7 @@ class ChannelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
-      params.require(:channel).permit( :empresa_id, :display_canal)
+      params.require(:channel).permit( :enterprise_id, :display_canal)
     end
 
-    def get_enterprises
-       @enterprises = Enterprise.find_by id: holding_id
-    end
 end

@@ -1,0 +1,8 @@
+<% holding = params[:holding_id]
+
+@enterprises = Enterprise.where( "holding_id= ?",holding)
+%>
+<option> Seleccionar Empresa</option> 
+<% @enterprises.each do |enterprise| %>
+  <option value="<%= enterprise.id %>"><%= enterprise.display_empresa %></option>
+<% end %>

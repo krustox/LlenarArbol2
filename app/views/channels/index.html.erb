@@ -15,7 +15,7 @@
 
   <tbody>
     <% @channels.each do |channel|
-        empresa = Enterprise.find_by id: @channels.enterprise_id
+        empresa = Enterprise.find_by id: channel.enterprise_id
     %>
       <tr>
         <td><%= channel.id %></td>
